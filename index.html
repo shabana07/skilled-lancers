@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skilled Lancers</title>
+    <link rel="shortcut icon" id="favicon" href="images/favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+       <!-- FONT  -->
+       <script src="https://kit.fontawesome.com/480a7d683a.js" crossorigin="anonymous"></script>
+       <!-- bootstrp  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyAEspLai3QHj-C58S3EdwK_kOHS13by3bs",
+            authDomain: "skilled-lancers-11d75.firebaseapp.com",
+            projectId: "skilled-lancers-11d75",
+            storageBucket: "skilled-lancers-11d75.appspot.com",
+            messagingSenderId: "236437512975",
+            appId: "1:236437512975:web:bb4614d71a74149b4bd47a"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+<body>
+    <!--Home-->
+    <div id="home">
+        <!-- navbar  -->
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-dark w-100  border-5 border-bottom border-white">
+            <div class="container-fluid d-flex">
+                <a class="navbar-brand text-white flex-grow-1" href="#">SKILLED LANCERS</a>
+                <button class="navbar-toggler text-white fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-bold mx-3 active" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-bold mx-3" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-bold mx-3" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-bold mx-3" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+            <!-- home  -->
+        <div class="text-white" id="sideBar">
+            <i class="fab fa-3x p-1 fa-facebook-square text-white"></i><br />
+            <i class="fab fa-3x p-1 fa-twitter-square text-white"></i><br />
+            <i class="fab fa-3x p-1 fa-linkedin text-white"></i><br />
+            <i class="fab fa-3x p-1 fa-whatsapp-square text-white"></i>
+        </div>
+        <div class="text-center content text-white float-end p-4 rounded-3">
+            <h3 class="text-white">We provide solutions foryour problems.</h3>
+            <button class="backGround text-white fw-bold fs-4 border rounded-3 w-50 p-2"><a href="#services" class="text-white"> Our
+                Services</a></button>
+        </div>
+    </div>
+    <!--About us-->
+    <div class=" lancers mt-5 position-relative" id="about">
+        <img src="images/background.jpg" alt="" class="img-fluid backGroundImg">
+        <h1 class=" text-decoration-underline">About Us</h1>
+    </div>
+    <div class="container-fluid mt-5 my-5">
+        <div class="row w-75 m-auto innerBoxShadow w-75 position-relative">
+            <div class="col-lg-5 col-md-5 col-sm-10 mx-auto mr-auto text-center p-5">
+                <span class="fs-5 lh-lg text-dark"><span
+                        class="textColor text-decoration-underline fw-bold fs-4 textColor">SKILLED
+                        LANCERS </span> are well equipped with advance knowledge of online problem solving skills</span>
+                <img src="images/aboutus.jpg" alt="" class="img-fluid w-100 m-auto">
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-4 col-md-3 col-sm-10 d-flex justify-content-center">
+                    <div class="card border-0 p-2" style="width: 18rem;">
+                        <img src="images/time.jpg" class="card-img-top image rounded-3" alt="Good time management">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-dark">Good time management</h5>
+                            <p class="card-text text-dark">Skilled lancers accurately track time spent on projects to
+                                ensure they
+                                are provided excellent
+                                service in a specific time, and be able to
+                                give a rough estimate on how long a task will take.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-3 col-sm-10 d-flex justify-content-center">
+                    <div class="card p-2 border-0" style="width: 18rem;">
+                        <img src="images/professional.jpg" class="card-img-top image rounded-3" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-dark">Professional</h5>
+                            <p class="card-text text-dark">Skilled lancers communicate well, keep our promises, do our
+                                job within
+                                the agreed time scale and
+                                maintain
+                                high-quality standards.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-3 col-sm-10 d-flex justify-content-center">
+                    <div class="card p-2 border-0" style="width: 18rem;">
+                        <img src="images/motivated.jpg" class="card-img-top image rounded-3" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-dark">Motivated</h5>
+                            <p class="card-text text-dark">Skilled Lancers are confident ,driven and responsible. We
+                                think and act
+                                as an entrepreneur and,
+                                as
+                                a result, are likely to have the necessary drive to suceed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-4 col-md-3 col-sm-10 d-flex justify-content-center">
+                    <div class="card p-2 border-0" style="width: 18rem;">
+                        <img src="images/flexible.jpg" class="card-img-top image rounded-0" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-dark">Flexible</h5>
+                            <p class="card-text text-dark">If your projects will vary hugely in size and complexity, so
+                                will our
+                                working hours.
+                                Skilled Lancers working hour depends on the size of your work.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-3 col-sm-10 d-flex justify-content-center">
+                    <div class="card p-2 border-0" style="width: 18rem;">
+                        <img src="images/Resilient.jpg" class="card-img-top image rounded-3" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-dark">Resilient</h5>
+                            <p class="card-text text-dark">Skilled lancers are positive and optimistic.We are ready
+                                toface
+                                different challenges.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Services-->
+    <div class=" lancers mt-5 position-relative" id="services">
+        <img src="images/background.jpg" alt="" class="img-fluid backGroundImg">
+        <h1 class=" text-decoration-underline">Our Services</h1>
+    </div>
+
+    <div class="container mt-5 text-center">
+        <div class="row">
+            <div class="plans container">
+                <div class="row text-center mt-3">
+                    <div class="w-75 mx-auto mr-auto text-center my-5 innerBoxShadow p-5">
+                        <p class="fs-5 lh-lg text-dark"><span
+                                class="textColor text-decoration-underline fw-bold fs-3 textColor">SKILLED
+                                LANCERS </span>
+                            is a group of Freelancers
+                            which has proficiency
+                            in different areas and are capable to provide following services. </p>
+                    </div>
+                    <!-- QUICKBOOKS  -->
+                    <div class="col-lg-8 col-md-8 d-sm-8 offset-lg-2 offset-md-2 text-center my-5">
+                        <div class="m-auto">
+                            <i class="fad fa-calculator-alt fa-3x mb-3"></i>
+                            <h2 class=" mb-3">Quickbooks</h2>
+                            <button onclick="showPlan()"
+                                class="mb-3 w-50 border-white rounded-pill text-white p-2 fw-bold backGround">PLANS</button>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Bookkeeping Services</li>
+                            <li class="list-group-item">Chart of Accounts</li>
+                            <li class="list-group-item">Bank Reconcilation</li>
+                            <li class="list-group-item">Balance Sheet</li>
+                            <li class="list-group-item">Profit and Loss Account</li>
+                        </ul>
+                    </div>
+                    <div id="quickbook" class="d-none">
+                        <!-- plan a  -->
+                        <h1>Choose a plan that works for your business
+                        </h1>
+                        <div class="col-lg-3 col-md-3 col-sm-10 offset-2 w-75 boxShadow p-3 my-3">
+                            <h3>Simple start</h3>
+                            <h6>Start your business</h6>
+                            <h2 class="text-decoration-line-through">US$16</h2>
+                            <h1>US$8</h1>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Track income & expenses</li>
+                                <li class="list-group-item">Send custom invoices & quotes</li>
+                                <li class="list-group-item">Connect your bank</li>
+                                <li class="list-group-item">Track VAT</li>
+                                <li class="list-group-item">
+                                    For one user, plus your accountant</li>
+                            </ul>
+                        </div>
+                        <!-- plan b  -->
+                        <div class="col-lg-3 col-md-3 col-sm-10 offset-2 w-75 boxShadow p-3 my-3">
+                            <h3>Essentials</h3>
+                            <h6>Run your business</h6>
+                            <h2 class="text-decoration-line-through">US$25</h2>
+                            <h1>US$12</h1>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Track income & expenses</li>
+                                <li class="list-group-item">Send custom invoices & quotes</li>
+                                <li class="list-group-item">Connect your bank</li>
+                                <li class="list-group-item">Track VAT</li>
+                                <li class="list-group-item">Insights & reports</li>
+                                <li class="list-group-item">Manage employees</li>
+                                <li class="list-group-item">Multi-currency</li>
+                                <li class="list-group-item">
+                                    For three user, plus your accountant</li>
+                            </ul>
+                        </div>
+                        <!-- plan c  -->
+                        <div class="col-lg-3 col-md-3 col-sm-10 offset-2 w-75 boxShadow p-3 my-3">
+                            <h3>Plus</h3>
+                            <h6>Grow your business</h6>
+                            <h2 class="text-decoration-line-through">US$34</h2>
+                            <h1>US$17</h1>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Track income & expenses</li>
+                                <li class="list-group-item">Send custom invoices & quotes</li>
+                                <li class="list-group-item">Connect your bank</li>
+                                <li class="list-group-item">Track VAT</li>
+                                <li class="list-group-item">Insights & reports</li>
+                                <li class="list-group-item">Manage employees</li>
+                                <li class="list-group-item">Multi-currency</li>
+                                <li class="list-group-item">Recurring transactions</li>
+                                <li class="list-group-item">Track inventory</li>
+                                <li class="list-group-item">Track projects & locations</li>
+                                <li class="list-group-item">Multi-currency</li>
+                                <li class="list-group-item">
+                                    For five user, plus your accountant</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--- Manychat --->
+                    <div class="col-lg-8 col-md-8 d-sm-8 offset-lg-2 offset-md-2 text-center my-5">
+                        <div class="m-auto">
+                            <i class="fas fa-comments fa-3x mb-3"></i>
+                            <h2 class="mb-3">Manychat</h2>
+                            <button onclick="showChat()"
+                                class="mb-3 w-50 border-white rounded-pill text-white p-2 fw-bold backGround">PLANS</button>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Zapier Integration</li>
+                            <li class="list-group-item">Lead Generation</li>
+                            <li class="list-group-item">Unique Design</li>
+                            <li class="list-group-item">Save user Data</li>
+                            <li class="list-group-item">Ecommerce/Shopify Stores</li>
+                            <li class="list-group-item">Api integration</li>
+                        </ul>
+                    </div>
+                    <div id="manychat" class="d-none">
+                        <!-- plan a  -->
+                        <h1>Choose a plan that works for your business
+                        </h1>
+                        <div class="col-lg-3 col-md-3 col-sm-10 offset-2 w-75 boxShadow p-3 my-3">
+                            <h3>Simple start</h3>
+                            <h2 class="text-decoration-line-through">US$20</h2>
+                            <h1>US$12</h1>
+                            <ul class="list-group list-group-flush">
+                                <li class="fs-4 list-unstyled">Channel access:</li>
+                                <li class="list-unstyled">Facebook Messenger</li>
+                                <li class="fs-4 list-unstyled"> Key features:</li>
+                                <li class="list-group-item">Automate conversations with unlimited custom chatbot Flows
+                                </li>
+                                <li class="list-group-item">Segment your audience with 10 customer Tags</li>
+                                <li class="list-group-item">Acquire new customers with access to basic Growth Tools</li>
+                                <li class="list-group-item">Email support, anytime</li>
+                            </ul>
+                        </div>
+                        <!-- plan b  -->
+                        <div class="col-lg-3 col-md-3 col-sm-10 offset-2 w-75 boxShadow p-3 my-3">
+                            <h3>Essentials</h3>
+                            <h2 class="text-decoration-line-through">US$30</h2>
+                            <h1>US$17</h1>
+                            <ul class="list-group list-group-flush">
+                                <li class="fs-4 list-unstyled">Channel access:</li>
+                                <li class="list-unstyled">Facebook Messenger</li>
+                                <li class="list-unstyled">Email (pay as you go)</li>
+                                <li class="list-group-item">SMS (pay as you go)</li>
+                                <li class="fs-4 list-unstyled"> Key features:</li>
+                                <li class="list-group-item">Automate conversations with unlimited custom chatbot Flows
+                                </li>
+                                <li class="list-group-item">Optimize performance with ManyChat Analytics</li>
+                                <li class="list-group-item">Grow your audience with access to advanced Growth Tools</li>
+                                <li class="list-group-item">Save time with integrations to the tools you already use
+                                </li>
+                                <li class="list-group-item">Make it your own by hiding the ManyChat branding</li>
+                                <li class="list-group-item">Email support, anytime</li>
+                            </ul>
+                            </ul>
+                        </div>
+                        <!-- plan c  -->
+                        <div class="col-lg-3 col-md-3 col-sm-10 offset-2 w-75 boxShadow p-3 my-3">
+                            <h3>Plus</h3>
+                            <h2 class="text-decoration-line-through">US$40</h2>
+                            <h1>US$23</h1>
+                            <ul class="list-group list-group-flush">
+                                <li class="fs-4 list-unstyled">Get access to all ManyChat features in Pro, plus custom
+                                    services</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--- amazon virtual assistant  --->
+                    <div class="col-lg-8 col-md-8 d-sm-8 offset-lg-2 offset-md-2 text-center my-5">
+                        <div class="m-auto">
+                            <i class="fab fa-amazon fa-3x mb-3"></i>
+                            <h2 class="mb-3">Amazon Virtual Assistant</h2>
+                            <button onclick="showAmazon()"
+                                class=" mb-3 w-50 border-white rounded-pill text-white p-2 fw-bold backGround">PLANS</button>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Product Research (Private Label / Wholesale)</li>
+                            <li class="list-group-item">Shipment Plans</li>
+                            <li class="list-group-item">Product Listing</li>
+                            <li class="list-group-item">Socila Media Marketting</li>
+                            <li class="list-group-item">PPC Management</li>
+                            <li class="list-group-item">Keyword Listing</li>
+                            <li class="list-group-item">Customer Services</li>
+                        </ul>
+                    </div>
+                    <div id="amazon" class="d-none">
+                        <!-- plan a  -->
+                        <div class="col-lg-3 col-md-3 col-sm-10 offset-2 w-75 boxShadow p-3 my-3">
+                            <h3>Get Amazon Virtual Assistance</h3>
+                            <h2 class="text-decoration-line-through">US$70</h2>
+                            <h1>US$50</h1>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Daily Seller Central Account Duties</li>
+                                <li class="list-group-item">Amazon Product Listing</li>
+                                <li class="list-group-item">Customer Service Duties</li>
+                                <li class="list-group-item">A+/Enhanced Brand Content Creation</li>
+                                <li class="list-group-item">Web Research</li>
+                                <li class="list-group-item">And more...</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--- shopify dropshipping --->
+                    <div class="col-lg-8 col-md-8 d-sm-8 offset-lg-2 offset-md-2 text-center my-5">
+                        <div class="m-auto">
+                            <i class="fas fa-truck fa-3x mb-3"></i>
+                            <h2 class="mb-3">Shopify Dropshipping</h2>
+                            <button onclick="showShopify()"
+                                class="mb-3 w-50 border-white rounded-pill text-white p-2 fw-bold backGround">PLANS</button>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Professionally designed store with premium theme in your budget.
+                            </li>
+                            <li class="list-group-item">Top selling products</li>
+                            <li class="list-group-item">fix any type of bugs in your shopify website</li>
+                            <li class="list-group-item">Integrate and manage shopify apps</li>
+                            <li class="list-group-item">Logo Creation with adobe illustrator</li>
+                            <li class="list-group-item">Adding trust badges in your store</li>
+                            <li class="list-group-item">Top selling products</li>
+                        </ul>
+                    </div>
+                    <div id="dropshiping" class="d-none">
+                        <!-- plan a  -->
+                        <h1>Choose a plan that works for your business
+                        </h1>
+                        <div class="col-lg-3 col-md-3 col-sm-10 offset-2 w-75 boxShadow p-3 my-3">
+                            <h3>Plan A</h3>
+                            <h2 class="text-decoration-line-through">US$72</h2>
+                            <h1>US$65</h1>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Basic shopify</li>
+                                <li class="list-group-item">Domain</li>
+                                <li class="list-group-item">Basic Oberlo</li>
+                            </ul>
+                        </div>
+                        <!-- plan b-->
+                        <div class="col-lg-3 col-md-3 col-sm-10 offset-2 w-75 boxShadow p-3 my-3">
+                            <h3>Plan B</h3>
+                            <h2 class="text-decoration-line-through">US$170</h2>
+                            <h1>US$150</h1>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Shopify + Domain + Oberlo</li>
+                                <li class="list-group-item">Product validation costs</li>
+                                <li class="list-group-item">Give or Take</li>
+                            </ul>
+                        </div>
+                        <!-- plan c-->
+                        <div class="col-lg-3 col-md-3 col-sm-10 offset-2 w-75 boxShadow p-3 my-3">
+                            <h3>Plan C</h3>
+                            <h2 class="text-decoration-line-through">US$190</h2>
+                            <h1>US$170</h1>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Buying store and checking product</li>
+                                <li class="list-group-item">a must have App</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--- web development --->
+                    <div class="col-lg-8 col-md-8 d-sm-8 offset-lg-2 offset-md-2 text-center my-5">
+                        <div class="m-auto">
+                            <i class="fas fa-laptop-code fa-3x mb-3"></i>
+                            <h2 class="mb-3">Web Development</h2>
+                            <button onclick="showWeb()"
+                                class="mb-3 w-50 border-white rounded-pill text-white p-2 fw-bold backGround">PLANS</button>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Mobile Friendly website</li>
+                            <li class="list-group-item">Landing Page Design</li>
+                            <li class="list-group-item">Dynamic Website</li>
+                            <li class="list-group-item">Static Website</li>
+                            <li class="list-group-item">Web Maintenance</li>
+                            <li class="list-group-item">Ecommerce Website</li>
+                            <li class="list-group-item">Wordpress Web Design</li>
+                        </ul>
+                    </div>
+                    <div id="webDevelopment" class="d-none">
+                        <!-- plan a  -->
+                        <div class="col-lg-3 col-md-3 col-sm-10 offset-2 w-75 boxShadow p-3 my-3">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Informational or Small Business Website (8-16 pages) <span
+                                        class="fw-bold"> $200 - $900</span></li>
+                                <li class="list-group-item">Corporate Website (25-75 pages) <span class="fw-bold">
+                                        $1,000 - $3,000</span></li>
+                                <li class="list-group-item">Ecommerce Website (100-1000 products) <span class="fw-bold">
+                                        $500 - $5,000</span></li>
+                                <li class="list-group-item">Database Driven Website or Website Application (20-2000
+                                    pages) <span class="fw-bold"> $600 - $7,000</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--- wordpress --->
+                    <div class="col-lg-8 col-md-8 d-sm-8 offset-lg-2 offset-md-2 text-center my-5">
+                        <div class="m-auto">
+                            <i class="fab fa-wordpress-simple fa-3x mb-3"></i>
+                            <h2 class="mb-3">Wordpress</h2>
+                            <button onclick="showWord()"
+                                class="mb-3 w-50 border-white rounded-pill text-white p-2 fw-bold backGround">PLANS</button>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Website Design</li>
+                            <li class="list-group-item">Website development</li>
+                            <li class="list-group-item">App development</li>
+                            <li class="list-group-item">Test all Your wordPress forms</li>
+                            <li class="list-group-item">Optimize your wordPress database</li>
+                            <li class="list-group-item">Find andfFix 404 errors</li>
+                        </ul>
+                    </div>
+                    <div id="wordpress" class="d-none">
+                        <!-- plan a  -->
+                        <h1>Choose a plan that works for your business
+                        </h1>
+                        <div class="col-lg-3 col-md-3 col-sm-10 offset-2 w-75 boxShadow p-3 my-3">
+                            <h3>Personal</h3>
+                            <h6>Best for Personal Use
+                            </h6>
+                            <h2 class="text-decoration-line-through">US$6</h2>
+                            <h1>US$4</h1>
+                            <h6>per month, billed yearly</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Free Domain for One Year</li>
+                                <li class="list-group-item">Best-in-class hosting</li>
+                                <li class="list-group-item">Remove WordPress.com Ads</li>
+                                <li class="list-group-item">Collect payments</li>
+                                <li class="list-group-item">Unlimited Email Support</li>
+                                <li class="list-group-item">
+                                    For one user, plus your accountant</li>
+                            </ul>
+                        </div>
+                        <!-- plan b  -->
+                        <div class="col-lg-3 col-md-3 col-sm-10 offset-2 w-75 boxShadow p-3 my-3">
+                            <h3>Premium</h3>
+                            <h6>Best for Freelancers</h6>
+                            <h2 class="text-decoration-line-through">US$12</h2>
+                            <h1>US$8</h1>
+                            <h6>per month, billed yearly</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Free Domain for One Year</li>
+                                <li class="list-group-item">Best-in-class hosting</li>
+                                <li class="list-group-item">Remove WordPress.com Ads</li>
+                                <li class="list-group-item">Collect payments</li>
+                                <li class="list-group-item">Unlimited Email Support</li>
+                                <li class="list-group-item">Live Chat Support</li>
+                                <li class="list-group-item">Earn ad revenue</li>
+                                <li class="list-group-item">Premium themes</li>
+                                <li class="list-group-item">Upload videos</li>
+                                <li class="list-group-item">Google analytics integration</li>
+                            </ul>
+                        </div>
+                        <!-- plan c  -->
+                        <div class="col-lg-3 col-md-3 col-sm-10 offset-2 w-75 boxShadow p-3 my-3">
+                            <h3>Business</h3>
+                            <h6>Best for Small Businesses
+                            </h6>
+                            <h2 class="text-decoration-line-through">US$30</h2>
+                            <h1>$25</h1>
+                            <h6>per month, billed yearly</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Free Domain for One Year</li>
+                                <li class="list-group-item">Best-in-class hosting</li>
+                                <li class="list-group-item">Remove WordPress.com Ads</li>
+                                <li class="list-group-item">Collect payments</li>
+                                <li class="list-group-item">Unlimited Email Support</li>
+                                <li class="list-group-item">Live Chat Support</li>
+                                <li class="list-group-item">Earn ad revenue</li>
+                                <li class="list-group-item">Premium themes</li>
+                                <li class="list-group-item">Upload videos</li>
+                                <li class="list-group-item">Google analytics integration</li>
+                                <li class="list-group-item">Install plugins and extend functionality for your site with
+                                    access to more than 50,000 WordPress plugins</li>
+                                <li class="list-group-item">Advanced SEO (Search Engine Optimization) tools</li>
+                                <li class="list-group-item">Automated site backups and one-click restore</li>
+                                <li class="list-group-item">SFTP (SSH File Transfer Protocol) and Database Access</li>
+                            </ul>
+                        </div>
+                        <!-- plan d  -->
+                        <div class="col-lg-3 col-md-3 col-sm-10 offset-2 w-75 boxShadow p-3 my-3">
+                            <h3>eCommerce</h3>
+                            <h6>Best for Online Stores
+                            </h6>
+                            <h2 class="text-decoration-line-through">US$55</h2>
+                            <h1>US$45</h1>
+                            <h6>per month, billed yearly</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Free Domain for One Year</li>
+                                <li class="list-group-item">Best-in-class hosting</li>
+                                <li class="list-group-item">Remove WordPress.com Ads</li>
+                                <li class="list-group-item">Collect payments</li>
+                                <li class="list-group-item">Unlimited Email Support</li>
+                                <li class="list-group-item">Live Chat Support</li>
+                                <li class="list-group-item">Earn ad revenue</li>
+                                <li class="list-group-item">Premium themes</li>
+                                <li class="list-group-item">Upload videos</li>
+                                <li class="list-group-item">Google analytics integration</li>
+                                <li class="list-group-item">Install plugins and extend functionality for your site with
+                                    access to more than 50,000 WordPress plugins</li>
+                                <li class="list-group-item">Advanced SEO (Search Engine Optimization) tools</li>
+                                <li class="list-group-item">Automated site backups and one-click restore</li>
+                                <li class="list-group-item">SFTP (SSH File Transfer Protocol) and Database Access</li>
+                                <li class="list-group-item">Accept payments in 60+ countries</li>
+                                <li class="list-group-item">Integrations with Top Shipping Carriers</li>
+                                <li class="list-group-item">Premium design options for online stores</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--- facebook ads --->
+                    <div class="col-lg-8 col-md-8 d-sm-8 offset-lg-2 offset-md-2 text-center my-5">
+                        <div class="m-auto">
+                            <i class="fab fa-facebook-square fa-3x mb-3"></i>
+                            <h2 class="mb-3">Facebook Ads</h2>
+                            <button onclick="showFace()"
+                                class="mb-3 w-50 border-white rounded-pill text-white p-2 fw-bold backGround">PLANS</button>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Grow brand awareness</li>
+                            <li class="list-group-item">Save time on marketting your business</li>
+                            <li class="list-group-item">Optimize ads</li>
+                            <li class="list-group-item">Save user Data</li>
+                            <li class="list-group-item">Ecommerce/Shopify Stores</li>
+                            <li class="list-group-item">Api integration</li>
+                        </ul>
+                    </div>
+                    <div id="facebookAds" class="plans d-none">
+                        <div class="col-lg-3 col-md-3 col-sm-10 offset-2 w-75 boxShadow p-3 my-3">
+                            <h3>Start Facebook Ads for your business</h3>
+                            <h2 class="text-decoration-line-through">US$80</h2>
+                            <h1>US$50</h1>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Completing a market analysis of your service areas and
+                                    industry</li>
+                                <li class="list-group-item">Finding local competitors currently outperforming you in
+                                    audience size and engagement</li>
+                                <li class="list-group-item">Posting and scheduling regular posts</li>
+                                <li class="list-group-item">Monitoring engagement and interaction</li>
+                                <li class="list-group-item">
+                                    Creating custom audiences to best target your company and brand</li>
+                                <li class="list-group-item">Reporting and improving paid social ads</li>
+                                <li class="list-group-item">Tracking your audience and reach</li>
+                                <li class="list-group-item">Tracking engagement rates</li>
+                                <li class="list-group-item">
+                                    Monitoring engagement and interaction from customer base</li>
+                                <li class="list-group-item">Building your audience across appropriate social channels
+                                </li>
+                                <li class="list-group-item">Marketing automation</li>
+                                <li class="list-group-item">Customer retention email</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--- email marketing --->
+                    <div class="col-lg-8 col-md-8 d-sm-8 offset-lg-2 offset-md-2 text-center my-5">
+                        <div class="m-auto">
+                            <i class="fas fa-at fa-3x mb-3"></i>
+                            <h2 class="mb-3">Email Marketing</h2>
+                            <button onclick="showEmail()"
+                                class="mb-3 w-50 border-white rounded-pill text-white p-2 fw-bold backGround">PLANS</button>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Integrated System</li>
+                            <li class="list-group-item">Managed Deliverability</li>
+                            <li class="list-group-item">Measurable Platform</li>
+                            <li class="list-group-item">Save user Data</li>
+                            <li class="list-group-item">Real-Time Spam Prevention</li>
+                            <li class="list-group-item">Automatic Follow-Ups</li>
+                            <li class="list-group-item">7/24 Support</li>
+                        </ul>
+                    </div>
+                    <div id="emailMarket" class="plans d-none">
+                        <div class="col-lg-3 col-md-3 col-sm-10 offset-2 w-75 boxShadow p-3 my-3">
+                            <h3>Simple start</h3>
+                            <h6>Start email marketing for your business</h6>
+                            <h1>US$80 to US$250</h1>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Research email marketing tools.</li>
+                                <li class="list-group-item">Compare which ones will work best for your marketing team.
+                                </li>
+                                <li class="list-group-item">Add them to your strategy template.</li>
+                                <li class="list-group-item">Identify your target audience</li>
+                                <li class="list-group-item">Create list-building tactics</li>
+                                <li class="list-group-item">Create your email list segements</li>
+                                <li class="list-group-item">
+                                    Creating email sending schedule</li>
+                                <li class="list-group-item">And more....</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Contact-->
+    <div class=" lancers mt-5 position-relative" id="contact">
+        <img src="images/background.jpg" alt="" class="img-fluid backGroundImg">
+        <h1 class=" text-decoration-underline">Contact Us</h1>
+    </div>
+    <!-- Form  -->
+    <div class="container mt-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-5 col-md-5 col-sm-10 d-flex justify-content-center p-3">
+                <div class="form fw-bold fs-4 border border-dark rounded-3">
+                    <div class="text-center">
+                        <h1 class="backGround text-white p-5 feel">Feel free to contact</h1>
+                        <hr />
+                        <hr />
+                    </div>
+                    <div class="input p-3">
+                        <div>
+                            <label for="name">Name</label>
+                            <input class="w-75" id="name" name="name" placeholder="Enter your name" type="text">
+                        </div>
+                        <br />
+                        <div>
+                            <label for="email">Email</label>
+                            <input class="w-75" type="email" id="email" name="email" placeholder="Enter your email">
+                        </div>
+                        <br />
+                        <div>
+                            <label for="message">Message</label><br />
+                            <textarea class="w-75" id="message" class="p-2 mt-2 rounded-3 border-secondary" cols="20"
+                                rows="4"></textarea>
+                        </div>
+                        <br />
+                        <div class="text-center">
+                            <button id="form" onclick="submit()" type="submit"
+                                class="w-50 rounded-pill backGround text-white p-1">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-10 p-3 textColor d-flex justify-content-center text-center">
+                <div>
+                    <div class="border innerBoxShadow p-4  contactBox mb-4">
+                        <i class="fab fa-facebook fa-3x"></i>
+                        <h5 class="text-dark m-3">Keep in touch via facebook</h5>
+                        <button class="backGround fw-bold text-white w-50 text-center rounded-pill p-2">Connect</button>
+                    </div>
+                    <div class="border innerBoxShadow p-4  contactBox mb-4">
+                        <i class="fab fa-whatsapp fa-3x"></i>
+                        <h5 class="text-dark m-3">Keep in touch via Whatsapp</h5>
+                        <button
+                            class="backGround fw-bold text-white w-50 text-center rounded-pill p-2">+9234-92604309</button>
+
+                    </div>
+                    <div class="border innerBoxSha4ow p-5  contactBox mb-4">
+                        <i class="fas fa-at fa-3x"></i>
+                        <h5 class="text-dark m-3">Keep it touch via email</h5>
+                        <button class="backGround fw-bold text-white w-50 text-center rounded-pill p-2">Connect</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <div class="footer d-flex justify-content-center backGround w-100 border-top border-5 p-3">
+        <h4 class="text-decoration-none text-white">© copyright reserved 2021</h4>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

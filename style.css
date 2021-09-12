@@ -1,0 +1,119 @@
+*{
+    color: black;
+    text-decoration: none !important;
+}
+.innerBoxShadow{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.backGround{
+    background-color: #4f3a3c;
+}
+.boxShadow{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.textColor{
+    color: #4f3a3c;
+}
+/* home  */
+#home{
+    height: 100vh;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    animation: slide 20s infinite;
+}
+@keyframes slide {
+    0% {
+        background-image: url(images/quickbook.jpg);
+    }
+    20% {
+        background-image: url(images/facebook-ads.png);
+    }
+    40% {
+        background-image: url(images/email-marketting.jpg);
+    }
+    60% {
+        background-image: url(images/web-dev.jpg);
+    }
+    80% {
+        background-image: url(images/wordpress.jpg);
+    }
+    100% {
+        background-image: url(images/facebook-ads.png);
+    }
+}
+#sideBar {
+    position: fixed;
+    left: 2%;
+    top: 50%;
+    z-index: 1;
+    width: 50px;
+    border-radius: 10px;
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    width: 50%;
+    background: rgba(20, 20, 20, 0.7);
+}
+.image{
+    height: 250px;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.collapse{
+    z-index: inherit;
+}
+.lancers{
+    height: 200px !important;
+    border-top: 2px solid black !important;
+    border-bottom: 2px solid rgb(10, 9, 9) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.backGroundImg{
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute;
+    z-index: -1;
+}
+.contactBo3{
+    width: 300px;
+    height: 100px !important;
+}
+@media screen and (max-width: 307px) {
+    .content {
+        position: absolute;
+        top: 40%;
+        left: 20%;
+        width: 75%;
+    }
+    .content button{
+        width: 80% !important;
+    }
+    .navbar{
+        width: 100%;
+    }
+    #home{
+        width: 100%;
+    }
+    .input{
+        font-size: 18px !important;
+    }
+    .feel{
+        font-size: 18px;
+        height: 100px;
+    }
+  }
